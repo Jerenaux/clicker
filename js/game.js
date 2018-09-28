@@ -50,6 +50,22 @@ Game.setVisits = function(){
     localStorage.setItem('visits',Game.scene.visits);
 };
 
+// ### Alternate way to save, by bundling all data into a JSON file stored as a single localStorage entry ###
+Game.saveFile = function(){
+    var file = {
+        score: Game.scene.score,
+        visits: Game.scene.visits
+    };
+    localStorage.setItem('saveFile',JSON.stringify(file));
+};
+
+Game.loadFile = function(){
+    var file = JSON.parse(localStorage.getItem('saveFile'));
+    Game.scene.score = file.score;
+    Game.scene.visits = file.visits;
+};
+// ##################"
+
 Game.updateScore = function(increment){
     // Updates the score and stores the new value in the localStorage
     Game.scene.score += increment;
