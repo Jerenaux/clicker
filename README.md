@@ -4,7 +4,7 @@
  
  The demo [can be found here](https://jerenaux.github.io/clicker/).
  
- The tutorial will be available soon.
+ The tutorial is available [here](http://www.dynetisgames.com/2018/10/28/how-save-load-player-progress-localstorage/).
  
  ## Running the demo ##
  
